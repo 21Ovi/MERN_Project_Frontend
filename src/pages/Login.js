@@ -38,7 +38,7 @@ function Login() {
     if (data.user) {
       localStorage.setItem("token", data.user);
       alert("Login successful");
-      window.location.href = "/dashboard";
+      window.location.href = "/home";
     } else {
       alert("Please check your username and password");
     }
@@ -55,24 +55,6 @@ function Login() {
 
   return (
     <div>
-      {/* <h1>Login</h1>
-      <form onSubmit={loginUser}>
-        <input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          type="email"
-          placeholder="Email"
-        />
-        <br />
-        <input
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          type="password"
-          placeholder="Password"
-        />
-        <br />
-        <input type="submit" value="Login" />
-      </form> */}
       <ThemeProvider theme={theme}>
         <Grid container component="main" sx={{ height: "100vh" }}>
           <CssBaseline />
